@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+}
+
+header {
+	background-color: lightgrey;
+	display: flex;
+	justify-content: space-between;
+	text-indent: 50px;
+	margin: 0px;
+	height: 5vh;
+
+}
+
+.background {
+	background-image: url(https://images.pexels.com/photos/261403/pexels-photo-261403.jpeg?cs=srgb&dl=abstract-aqua-blue-clean-261403.jpg&fm=jpg);
+	height: 85vh;
+	margin-top: 0px;
+
+}
+
+input {
+	width: 400px;
+	padding: 8px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+#centertext {
+	color: white;
+	font-size:30px;
+	text-align: center;
+	padding-top: 100px;
+	margin-top: 0px;
+}
+
+#start {
+	align-items: center;
+	justify-content: center;
+	padding-top: 12px;
+}
+
+.signin {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	border: 1px solid black;
+	float: right;
+
+}
+
+.button1 {
+	background-color: darkblue;
+	border: none;
+	color: white;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	float: right;
+	margin: 5px;
+	margin-right: 50px;
+}
+
+.button2 {
+	background-color: darkblue;
+	border: none;
+	color: white;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+
+}
+
+form {
+	display: flex;
+	justify-content: center;
+
+}
+
+table {
+	justify-content: space-around;
+	align-items: center;
+	background-color: lightgrey;
+	width: 100%;
+}
+
+td {
+	padding-left: 20px;
+	text-align: center;
+	
+}
