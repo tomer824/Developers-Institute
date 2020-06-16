@@ -36,8 +36,8 @@ input {
 
 #start {
 	align-items: center;
-	justify-content: left;
-	
+	justify-content: center;
+	padding-top: 12px;
 }
 
 .signin {
@@ -91,6 +91,6 @@ table {
 
 td {
 	padding-left: 20px;
-	align-items: center;
+	text-align: center;
 	
 }

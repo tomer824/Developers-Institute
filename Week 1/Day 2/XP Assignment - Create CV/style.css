@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+}
+
+header { 
+	background-color: grey;
+	height:	12vh;
+	color: white;
+	text-align: center;
+	
+ }
+
+ h3 {
+ 	width: 100vw;
+ 	padding-top: 15px;
+ }
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5px;
+}
+
+#mypic {
+	display: block;
+	height: 150px;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7px;
+	z-index: 1;
+	border-radius: 50%
+	
+}
+
+.aboutme {
+	text-align: center;
+	border-width: 80px;
+	background-color: white;
+	width: auto;
+	padding: 5px;
+	margin: 5px;
+	padding-top: 150px;
+	z-index: -1;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 0px;
+	box-shadow: 0px 2px 2.5px 1.5px rgba(0,0,0,0.75);
+	background-color: rgb(240, 240, 240);
+}
+
+.table1 {
+	background-color: lightblue;
+	text-align: center;
+	width: 100vw;
+}
+
+th {
+	width: 50vw;
+}
