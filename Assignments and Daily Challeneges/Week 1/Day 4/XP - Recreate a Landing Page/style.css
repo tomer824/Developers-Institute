@@ -1,0 +1,108 @@
+body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("https://image.shutterstock.com/image-vector/world-map-background-fade-style-260nw-521922979.jpg"); 
+/*	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;*/
+	background-size: cover;
+
+}
+
+.center {
+	width: 100vw;
+	text-align: center;
+	margin-top: 40px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 70px;
+}
+
+.grid-center {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	margin-top: 100px;
+	justify-content: center;
+
+}
+
+.cards-center {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	margin-top: 100px;
+	justify-content: space-around;
+	border: 1px solid black;
+
+
+	
+}
+
+.card {
+	width: 18rem;
+	height: 20rem;
+}
+
+
+.cardtop {
+	display: block;
+	align-items: center
+
+
+}
+
+
+img {
+	border-radius: 50%;
+	align-items: center;
+}
+
+
+#bottom-left {
+	background-color: #FFC0CB;
+	width: 100%;
+
+}
+
+#bottom-center {
+	background-color: #800080;
+	width: 100%;
+}
+
+#bottom-right {
+	background-color: #40E0D0;
+	width: 100%;
+
+}
+
+.half-background1 {
+/*	background-color: pink;
+	width: 100%;*/
+	background-image: linear-gradient(bottom, #FFC0CB 50%, #FFFFFF 50%);
+	background-image: -o-linear-gradient(bottom, #FFC0CB 50%, #FFFFFF 50%);
+	background-image: -moz-linear-gradient(bottom, #FFC0CB 50%, #FFFFFF 50%);
+	background-image: -webkit-linear-gradient(bottom, #FFC0CB 50%, #FFFFFF 50%);
+	background-image: -ms-linear-gradient(bottom, #FFC0CB 50%, #FFFFFF 50%);
+}
+
+.half-background2 {
+/*	background-color: pink;
+	width: 100%;*/
+	background-image: linear-gradient(bottom, #800080 50%, #FFFFFF 50%);
+	background-image: -o-linear-gradient(bottom, #800080 50%, #FFFFFF 50%);
+	background-image: -moz-linear-gradient(bottom, #800080 50%, #FFFFFF 50%);
+	background-image: -webkit-linear-gradient(bottom, #800080 50%, #FFFFFF 50%);
+	background-image: -ms-linear-gradient(bottom, #800080 50%, #FFFFFF 50%);
+}
+
+.half-background3 {
+	background-image: linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
+	background-image: -o-linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
+	background-image: -moz-linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
+	background-image: -webkit-linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
+	background-image: -ms-linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
+}

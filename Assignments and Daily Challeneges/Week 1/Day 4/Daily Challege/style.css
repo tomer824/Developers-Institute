@@ -1,0 +1,23 @@
+#wrapper {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	justify-content: center;
+	justify-content: center;
+}
+
+.yellow-box {
+	justify-content: center;
+	background-color: yellow;
+	height: 200px;
+	width: 200px;
+	margin: 25px;
+}
+
+.outter-boxes {
+	margin: auto;
+}
+
+#center-box {
+	display: flex;
+	margin: auto;
+}
