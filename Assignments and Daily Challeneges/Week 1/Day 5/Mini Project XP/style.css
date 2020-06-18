@@ -1,0 +1,35 @@
+.jumbotron {
+	padding-left: 200px;
+}
+
+.bottom-columns {
+	/*display: grid;*/
+	/*grid-template-columns: 1fr 1fr 1fr;*/
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+
+.card {
+	border: none;
+	/*margin: auto;*/
+}
+
+.w3-tag {
+	border-radius: 25px;
+}
+
+.btn-light {
+
+}
+
+.padleft {
+	display: flex;
+	padding-left: 183px;
+
+}
+
+.padright {
+	padding-right: 140px;
+}
