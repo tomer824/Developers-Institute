@@ -103,3 +103,12 @@ img {
 	background-image: -webkit-linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
 	background-image: -ms-linear-gradient(bottom, #40E0D0 50%, #FFFFFF 50%);
 }
+
+#card-left {
+	margin-top: 30px;
+
+}
+
+#card-center {
+	margin-top: 100px;
+}

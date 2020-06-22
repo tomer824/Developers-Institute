@@ -156,11 +156,42 @@ nav {
     color: #F97300; 
     font-size: 50px;
     padding-top: 40px;
-    font-family: railway;    
+    font-family: railway;  
+   
 }
 
 .about-me {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15vh;
+    margin-top: 10vh;
+    margin-left: 50px;
+    margin-right: 50px;
+   
+}
+
+.pic-of-me {
+ /*   padding-left: 25vw;*/
+    border-right: 6px solid rgb(64,224,208);
+    display: block;
+    margin: auto;
+    
+}
+
+.my_pic {
+    border-radius: 50%;
+    max-width: 100%;
+    padding-right: 25px;
+}
+
+
+
+.my-info {
+/*    padding-left: 5vw;*/
+ /*   padding-right: 30vw;*/
+    border: 2px solid black;
+    margin-left: 25px;
 }
 
 /*Portfolio*/
@@ -169,7 +200,7 @@ nav {
     padding-left: 45%; 
     color: #F97300; 
     font-size: 50px;
-    padding-top: 40px;
+    padding-top: 80px;
     font-family: railway;    
 }
 
