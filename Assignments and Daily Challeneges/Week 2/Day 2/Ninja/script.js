@@ -10,17 +10,17 @@
 //  	bigger = age1;
 //  	smaller = age2;
 //  }
-//  else {
-//  	let bigger = age2;
-//  	let smaller = age1;
-//  }
+ else {
+ 	let bigger = age2;
+ 	let smaller = age1;
+ }
 
-// let difference = bigger - smaller
-// let half = difference / 2
+let difference = bigger - smaller
+let half = difference / 2
 
-// let result = bigger - half
+let result = bigger - half
 
-// 	console.log(result)
+	console.log(result)
 
 
 // Exercise 2

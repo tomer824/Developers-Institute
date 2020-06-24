@@ -21,7 +21,7 @@ if (indexNot1 > -1 && indexNot1 < indexBad1) {
 
 
 if (indexNot2 > -1 && indexNot2 < indexBad2) {
-	str2=str2.substring(0, indexNot2)
+	str2=str2.substring(0, indexNot2) + "good" + str2.substring(indexBad2+3, str2.length);
 	console.log(str2 + "good")
 }
 
@@ -30,7 +30,7 @@ if (indexNot2 > -1 && indexNot2 < indexBad2) {
 
 
 if (indexNot3 > -1 && indexNot3 < indexBad3) {
-	str3=str3.substring(0, indexNot3)
+	str3=str3.substring(0, indexNot3) + "good" + str3.substring(indexBad3+3, str3.length);
 	console.log(str3 + "good")
 }
 
