@@ -1,10 +1,9 @@
 // Exercise 1
 
-// let colors = ["red", "blue", "green", "yellow"]
-// let x = 1
+// let colors = ["red", "blue", "green", "yellow", "purple", "orange"]
 
-// 	for(let i = 0; i < colors.length; i++, x++){
-// 		console.log(`My # ${x} choice is  ${colors[i]}`)
+// 	for(i in colors){
+// 		console.log("My #" + (Number(i)+1) + " choice is " + colors[i])
 
 // 	}
 
@@ -14,19 +13,14 @@
 
 // let names = ["Jack", "Phillip", "Sarah", "Amanda","Bernard", "Kyle"]
 
-// let ordered = names.sort();
-// let final = []
-// let initials;
+// names.sort();
+// let final = '';
 
-// 	for (let i = 0; i < ordered.length; i++){
-// 		initials = ordered[i];   
-// 		initials = initials.charAt(0); 
-// 		final.push(initials);  
+// 	for(name of names){
+// 		final += name.charAt(0)
 // 	}
-// 	final = final.join('')
-	
-// 	console.log(final)
 
+// console.log(final)
 
 // Exericse 3
 
@@ -39,51 +33,54 @@
 
 // Exericse 4
 
-let people = ["Greg", "Mary", "Devon", "James"]
-let x = 0
-let arr = x
-let copy = []
+// let people = ["Greg", "Mary", "Devon", "James"]
 
-	for(let i = 0; i < people.length; i++){
-		console.log(people[i])
-	}
-		people.shift()
-		console.log(people)
-		people.splice(2, 1, "Jason")
-		console.log(people)
-		people.push("Tomer")
-		console.log(people)
+// // 1.
+// 	for(person of people){
+// 		console.log(person)
+// 	}
 
-		for(let x = 0; x < people.length;  x++){
-			if(people[x] != "Mary"){
-				console.log(people[x])
-			}
-			else {
-				console.log(people[x])
-				break
-			}
-		}
+// //  2.
+// 	people.shift();
+// 	console.log(people)
 
-		for(let y = 0; y < people.length; y++)
-			if(people[y] != "Mary" && people[y] != "Tomer"){
-				let z = people.slice(y, y + 1)
-				z = String(z)
-				copy.push(z)
-			}
-			else {
-				continue
-			}
-			console.log(copy)
+// // 3.
+// 	people.splice(people.indexOf("James"), 1, "Jason")
+// 	console.log(people)
 
-		// 	(let x = 0; people[x] != "Mary"; x++)
-		// 	console.log(people[x])
-		// let copy = people.slice[1, 2]
-		// 	console.log(copy)
-		
-		// let index = people.indexof("Mary")
-		// console.log(`Mary is at index ${index}`)
-		
+// // 4.
+// 	people.push("Tomer")
+// 	console.log(people)
 
+// // 5.
+// 	for(person of people){
+// 		console.log(person)
+// 		if(person =="Mary"){
+// 			break
+// 		}
+// 	}
+
+// // 6. 
+// 	let people_copy  = people.slice(0, people.indexOf("Mary"))
+// 	console.log(people_copy) 
+	
+// 	people_copy += people.slice(people.indexOf("Mary") + 1, people.indexOf("Tomer"))
+// 	console.log(people_copy)
+	
+// 	people_copy += people.splice(people.indexOf("Tomer") + 1)
+// 	console.log(people_copy)
+// 	console.log(people)
+
+// // 7.
+// 	console.log(people.indexOf("Mary"))
+
+// // 8.
+// 	console.log(people.indexOf("Foo"))
+
+// // 9.
+
+// 	let last = (people[people.length -1])
+// 	console.log(last)
 
 
 
