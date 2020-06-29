@@ -112,7 +112,29 @@
 // my_bill()
 
 
-// Exericse 5
+// 5.
+// function randomEven(){
+// let computerNumber = Math.floor(Math.random() * 101);
+
+// 	for(let i = 0; i < computerNumber; i++){
+// 		if(i % 2 == 0){
+// 			console.log(i)
+// 		}
+// 	}
+// }
+
+// randomEven()
+
+// 6.
+// let num = 0
+// 	for(i = 0; i < 500; i = i+23){
+// 		num += i
+// 		console.log(i)
+// 	}
+// 		console.log(num)
+
+
+// Exericse 7
 
 //1.
 // function hotel_cost(){

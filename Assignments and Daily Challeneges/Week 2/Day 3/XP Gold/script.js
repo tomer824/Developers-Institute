@@ -1,6 +1,6 @@
 // 1.
 
-// const GUEST_LIST = {
+//const GUEST_LIST = {
 // 	Randy : "Germany",
 // 	Karla : "France",
 // 	Wendy : "Japan",
@@ -29,8 +29,13 @@
 // 	raquel : 7
 // }
 
-// console.log(Object.keys(family))
-// console.log(Object.values(family))
+// for (let elem in family)
+// 	console.log(elem)
+
+// for (let elem in family)
+// 	console.log(family[elem])
+
+
 
 // 3.
 
@@ -68,19 +73,23 @@
 // Each object should also have a property which value is a function that calculates the Body Mass Index (BMI) of each person
 // Create a JS function that compare both the BMI. Display the name of the person that has the biggest BMI.
 
-let person1 = {
+
+
+function calc_bmi(){
+	let person1 = {
 	"John" : [200, 73],
-	body_mass_index(person1.John)
-}
+	body_mass_index(person1.John[0], person1.John[1])
+	}
 
-let person2 = {
+	let person2 = {
 	"Mary" : [150, 66],
-	body_mass_index(person2.Mary)
+	body_mass_index(person2.Mary[0], person2.Mary[1])
+	}
 }
 
-function body_mass_index(mass, height)
+function body_mass_index(mass, height){
 	let bmi = mass / height
-	return bmi
+	console.log(bmi)
+}
 
-function calc_bmi()
-	
+calc_bmi()
