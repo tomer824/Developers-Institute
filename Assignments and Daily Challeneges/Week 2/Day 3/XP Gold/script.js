@@ -73,18 +73,18 @@
 // Each object should also have a property which value is a function that calculates the Body Mass Index (BMI) of each person
 // Create a JS function that compare both the BMI. Display the name of the person that has the biggest BMI.
 
-
-
-function calc_bmi(){
-	let person1 = {
-	"John" : [200, 73],
-	body_mass_index(person1.John[0], person1.John[1])
+let person1 = {
+	"John": [200, 73],
 	}
 
 	let person2 = {
-	"Mary" : [150, 66],
-	body_mass_index(person2.Mary[0], person2.Mary[1])
+	"Mary": [150, 66],
 	}
+
+function calc_bmi(){
+	body_mass_index(person1["John"][0], person1["John"][1])
+	body_mass_index(person2["Mary"][0], person2["Mary"][1])
+
 }
 
 function body_mass_index(mass, height){
