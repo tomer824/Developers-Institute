@@ -9,6 +9,7 @@ function my_f(button){
 	if(button == "+" || button == "-" || button == "*" || button == "/"){
 		operator = button;
 		first_num = parseInt(num.join());
+		console.log(first_num + " " + operator)
 		num = [];
 	}
 	else if(button == "=") {
