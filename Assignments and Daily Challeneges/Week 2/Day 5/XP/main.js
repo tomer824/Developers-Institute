@@ -8,7 +8,7 @@ let equal;
 function my_f(button)
 	if(button == "+" || button == "-" || button == "*" || button == "/"){
 		operator = button;
-		holding(num);
+		first_num = parseInt(num.join());
 	}
 	else if(button = "=") {
 		// second_num = convert num to string and then to number
