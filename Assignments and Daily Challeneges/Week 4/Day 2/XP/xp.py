@@ -94,31 +94,31 @@
 
 # 9.
 
-# basket = ["Banana", "Apples", "Oranges", "Blueberries"]
-# i = 0
+basket = ["Banana", "Apples", "Oranges", "Blueberries"]
+i = -1
+j = 0
 
-# while i < len(basket):
-#     print(basket[i])
-#     i += 1
+while j < (len(basket)):
+    print(basket[i])
+    i -= 1
+    j += 1
 
 # 10.
 
-# i = -1
+# i = 0
 # basket = ["Banana", "Apples", "Oranges", "Blueberries"]
 
 # while i < len(basket):
 #     if i % 2 == 0:
 #         print(basket[i])
-#     i -= 1
+#     i += 1
 
 #11. 
-
-# x = 3
 
 # for multiplication in range(1, 11):
 #     print(multiplication * 3)
 
 
-for x in range(1500, 2700):
-    if x % 7 == 0 and x % 5 == 0:
-        print(x)
+# for x in range(1500, 2700):
+#     if x % 7 == 0 and x % 5 == 0:
+#         print(x)
