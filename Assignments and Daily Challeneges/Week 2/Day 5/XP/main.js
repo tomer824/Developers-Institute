@@ -8,34 +8,39 @@ let equal;
 function my_f(button){
 	if(button == "+" || button == "-" || button == "*" || button == "/"){
 		operator = button;
-		first_num = parseInt(num.join());
+		first_num = parseInt(num.join(""));
 		console.log(first_num + " " + operator)
 		num = [];
 	}
 	else if(button == "=") {
 		// second_num = convert num to string and then to number
-		second_num = parseInt(num.join());
+		second_num = parseInt(num.join(""));
 		calc(first_num, operator, second_num)
 	}
 	else {
 		num.push(button);
+		console.log(num)
 	}
 }
 
 
 function calc(num1, operator, num2){
 	switch(operator){
-		case operator == "+":
+		case "+":
 			console.log(first_num + second_num)
+			break
 			// return first_num + second_num
-		case operator == "-":
+		case "-":
 			console.log(first_num - second_num)
+			break
 			// return first_num - second_num
-		case operator == "*":
+		case "*":
 			console.log(first_num * second_num)
+			break
 			// return first_num * second_num
-		case operator == "/":
+		default:
 			console.log(first_num / second_num)
+			break
 			// return first_num / second_num	
 	}
 }

@@ -44,16 +44,16 @@ hp.read()
 print(hp.BEST_AUTHOR)
 print(Book.BEST_AUTHOR)
 
-class American(Human):
+# class American(Human):
     
-    def amazed(self):
-        print("It's amazing!")
+#     def amazed(self):
+#         print("It's amazing!")
 
-tzivia = American(name="Tzivia", age=22, gender="F")
+# tzivia = American(name="Tzivia", age=22, gender="F")
 
-print(tzivia.name)
-tsivia.talk()
-tzivia.amazed()
+# print(tzivia.name)
+# tsivia.talk()
+# tzivia.amazed()
 
 # from math import pi
 # class Book:
