@@ -50,15 +50,31 @@ class BankAccount():
         self.owner = owner
         self.balance = balance
     
-    def deposit(self, cash):
-        if cash > 0:
-            self.balance += cash
-        return self.balance
+    def deposit(self):
+        twenty = int(input("How many $20 bills would you like to deposit? ")) * 20
+        fifty = int(input("How many $50 bills would you like to deposit? ")) * 50
+        hundred = int(input("How many $100 would you like to deposit? ")) * 100
+        total = twenty + fifty + hundred
+        if total > 0:
+            self.balance += total
+            print(self.balance)
+            deposit_more = input("Would you like to deposit more, enter y or n? ")
+        if deposit_more == "y":
+            self.deposit()
+            return self.balance
+        else:
+            print("Thank you for coming, have a nice day. ")
+
     
     def withdraw(self, cash_back):
-        if cash_back <= self.balance:
+        if cash_back % 50 == 0 or cash_back % 20 == 0 and cash_back <= self.balance:
             self.balance -= cash_back
-        return self.balance
+            return self.balance
+        elif cash_back % 50 != 0 or cash_back % 20 != 0:
+            print("This machine can only provide $20 and $50 bills.")
+        else:
+            print("You don't have enough money in your account for that withdrawal.")
+        
     
 class Owner(BankAccount):
     def __init__(self, owner, balance, cc_num, password):
@@ -71,23 +87,22 @@ class Owner(BankAccount):
             if user_password != self.password and i == 0:
                 user_password = int(input("Please reenter your password: "))
             elif self.password == user_password:
-                return "Would you like to Deposit or to Withdraw?"
+                answer = input("Would you like to Deposit or to Withdraw? ")
+                if answer.lower() == "deposit":
+                    self.deposit()
+                    return
+                elif answer.lower() == "withdraw":
+                    cash_back = int(input("How much would you like to withdraw? "))
+                    self.withdraw(cash_back)
+                    return
+                else:
+                    cash_back = int(input("I don't understand. Please try again. How much would you like to withdraw? "))
+                    self.withdraw(cash_back)
+                    return
+
             else:
+                user_cc_num = None
                 return "Your credit card has been eaten by the machine!"
 
-
-
-    #             return "Would you like to Deposit or to Withdraw"
-    #         else:
-    #             count += 1
-    #             print("Please try again")
-    #             check_owner_info_2()
-    #             if count > 1:
-    #                 return "Your card has been eaten by the machine" and user_cc_num = ""
-    
-    # def check_owner_info_2(self, cc_num, password)
-    #         if user_password != self.password:
-    #             return "Would you like to Deposit or to Withdraw"
-    #         else:
-    #             return "Your card has been eaten by the machine" and user_cc_num = ""
-
+tomer = Owner("Tomer", 100, 123456, 987654)
+tomer.check_owner_info(123456, 987654)

@@ -27,23 +27,20 @@
 
 # 4.
 
-# magicians = ["Houdini", "Harry Potter", "Magic Man"]
-# new_list = []
+magicians = ["Houdini", "Harry Potter", "Magic Man"]
 
-# def show_magicians(magicians):
-#     for name in magicians:
-#         print(name)
+def show_magicians(magicians):
+    for name in magicians:
+        print(name)
 
-# def make_great(magicians):
-#     i=0
-#     for name in magicians:
-#         magicians[i] = name + " the Great"
-#         i += 1
+def make_great(magicians):
+    for name in range(len(magicians)):
+        magicians[name] = magicians[name] + " the Great"
 
-# make_great(magicians)
-# print(magicians)
+show_magicians(magicians)
+make_great(magicians)
 
-# show_magicians(magicians)
+show_magicians(magicians)
 
 # 5.
 
@@ -56,32 +53,32 @@
 
 # 6.
 
-def get_age(year, month, day):
-    current_year = 2020
-    current_month = 7
-    current_day = 8
-    age = current_year - year
-    if current_month > month:
-        age -= 1
-    elif current_month == month:
-        if current_day > day:
-            age -=1
-    return age
+# def get_age(year, month, day):
+#     current_year = 2020
+#     current_month = 7
+#     current_day = 8
+#     age = current_year - year
+#     if current_month > month:
+#         age -= 1
+#     elif current_month == month:
+#         if current_day > day:
+#             age -=1
+#     return age
     
-def can_retire(gender, date_of_birth):
-    day, month, year = date_of_birth.split("/")
-    age = get_age(int(year),int(month), int(day))
-    if gender == "male" and age > 64:
-        print("True")
-        return True
-    elif gender == "female" and age > 61:
-        print("True")
-        return True
-    else:
-        print("False")
-        return False
+# def can_retire(gender, date_of_birth):
+#     day, month, year = date_of_birth.split("/")
+#     age = get_age(int(year),int(month), int(day))
+#     if gender == "male" and age > 64:
+#         print("True")
+#         return True
+#     elif gender == "female" and age > 61:
+#         print("True")
+#         return True
+#     else:
+#         print("False")
+#         return False
 
-gender = input("What is your gender, male or female? ")
-dob = input("Please enter your date of birth as DD/MM/YYYY ")
+# gender = input("What is your gender, male or female? ")
+# dob = input("Please enter your date of birth as DD/MM/YYYY ")
 
-can_retire(gender, dob)
+# can_retire(gender, dob)
