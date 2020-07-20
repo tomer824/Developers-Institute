@@ -37,21 +37,26 @@ print(goldstein.members)
 from random import randint
 
 class TheIncredibles(Family):
+    def __init__(self, members, last_name):
+        super().__init__(members, last_name)
+        self.members = members
+        self.last_name = last_name
      
+    def incredible_presentation(self):
+        super_powers = ["X-Ray Vision", "Super Strength", "Bullet Proof", "Super Speed"]
+        item = randint(0, 4)
+        return super_powers[item]
+
     def use_power(self, name):
         for member_dict in self.members:
             if member_dict["name"] == name:
                 if member_dict["age"] > 18:
                     print(f'{member_dict["name"]} has incredible_presentation().')
-                    self.member_dict["power"] = members.incredible_presentation()
+                    member_dict["power"] = incredible_presentation()
                 else:
                     raise Exception("You have no power here!")
     
-    def incredible_presentation(self):
-        super_powers = ["X-Ray Vision", "Super Strength", "Bullet Proof", "Super Speed"]
-        item = randint(0, 4)
-        for powers in super_powers:
-            return powers[item]
 
 
 incredibles = TheIncredibles(members, "Goldstein")
+incredibles.use_power("Michael")
