@@ -46,63 +46,95 @@
 # 2.
 
 class BankAccount():
-    def __init__(self, owner, balance = 0):
-        self.owner = owner
-        self.balance = balance
     
-    def deposit(self):
-        twenty = int(input("How many $20 bills would you like to deposit? ")) * 20
-        fifty = int(input("How many $50 bills would you like to deposit? ")) * 50
-        hundred = int(input("How many $100 would you like to deposit? ")) * 100
-        total = twenty + fifty + hundred
-        if total > 0:
-            self.balance += total
-            print(self.balance)
-            deposit_more = input("Would you like to deposit more, enter y or n? ")
-        if deposit_more == "y":
-            self.deposit()
-            return self.balance
-        else:
-            print("Thank you for coming, have a nice day. ")
+	def __init__(self, card_number, pin_number=12345):
+		self.balance = 0
+		self.card_number = card_number
+		self.pin_number = pin_number
 
-    
-    def withdraw(self, cash_back):
-        if cash_back % 50 == 0 or cash_back % 20 == 0 and cash_back <= self.balance:
-            self.balance -= cash_back
-            return self.balance
-        elif cash_back % 50 != 0 or cash_back % 20 != 0:
-            print("This machine can only provide $20 and $50 bills.")
-        else:
-            print("You don't have enough money in your account for that withdrawal.")
-        
-    
-class Owner(BankAccount):
-    def __init__(self, owner, balance, cc_num, password):
-        super().__init__(owner, balance)
-        self.cc_num = cc_num
-        self.password = password
-    
-    def check_owner_info(self, user_cc_num, user_password):
-        for i in range(2):
-            if user_password != self.password and i == 0:
-                user_password = int(input("Please reenter your password: "))
-            elif self.password == user_password:
-                answer = input("Would you like to Deposit or to Withdraw? ")
-                if answer.lower() == "deposit":
-                    self.deposit()
-                    return
-                elif answer.lower() == "withdraw":
-                    cash_back = int(input("How much would you like to withdraw? "))
-                    self.withdraw(cash_back)
-                    return
+    def deposit(self, amount):
+        if amount >= 0:
+            self.balance += amount
+            return True
+        return False
+​
+	def withdraw(self, amount):
+		if amount <= self.balance and checkBills = True:
+			self.balance -= amount
+			return amount
+		return False
+​
+	def check_info(self, card_number, pin_number):
+		if card_number == self.card_number and pin_number == self.pin_number:
+			return True
+		return False
+​
+	def depositBills(self):
+		ans = True
+        total = 0
+        while ans = True:
+            twenty = int(input("How many twenties would you like to deposit? ")) * 20
+            fifty = int(input("How many fifties would you like to deposit? ")) * 50
+            hundred = int(input("How many hundreds would you like to deposit? ")) * 100
+            total += sum(twenty, fifty, hundred)
+            again = ("Would you like to make another deposit? ")
+                if again = yes.lower():
+                    ans = True
                 else:
-                    cash_back = int(input("I don't understand. Please try again. How much would you like to withdraw? "))
-                    self.withdraw(cash_back)
-                    return
-
-            else:
-                user_cc_num = None
-                return "Your credit card has been eaten by the machine!"
+                    ans = False
+        return total
+​
+	def checkBills(self, amount):
+		if amount % 20 == 0 or amount % 50 == 0 
+            return True
+        elif amount - 50 < 0 and amount - 50 % 20 = 0):
+            return true
+        return False
+​
+​​
+class Owner():
+​
+	def __init__(self, name):
+		self.name = name
+		print(f"{self.name} has been born")
+​
+​
+	def open_account(self, card_number, pin_number):
+		self.account = BankAccount(card_number, pin_number)
+		print("Your account is ready")
+​
+​
+	def deposit(self, amount):
+		if self.authenticate():
+			amount = self.depositBills()
+			if self.account.deposit(amount):
+				print(f"Deposit Successful. You new balance is: {self.account.balance}")
+			else:
+				print("Invalid Amount.")
+		else:
+			print("Your card has been eaten")
+​
+​
+	def withdraw(self, amount):
+		if self.authenticate():
+			if self.account.withdraw(amount):
+				print(f"Here is your: {amount}")
+			else:
+				print("Insufficient Balance")
+		else:
+			print("Your card has been eaten")
+​
+​
+	def authenticate(self):
+		for i in range(2):
+			card_number = input("Enter your card number: ")
+			pin_number = input("Enter your pin number: ")
+			if self.account.check_info(card_number, pin_number):
+				return True
+			else:
+				if i < 1:
+					print("Invalid authentication. Please try again")
+		return False
 
 tomer = Owner("Tomer", 100, 123456, 987654)
 tomer.check_owner_info(123456, 987654)

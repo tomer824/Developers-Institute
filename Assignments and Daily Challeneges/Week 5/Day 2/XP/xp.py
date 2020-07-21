@@ -43,16 +43,16 @@ class TheIncredibles(Family):
         self.last_name = last_name
      
     def incredible_presentation(self):
-        super_powers = ["X-Ray Vision", "Super Strength", "Bullet Proof", "Super Speed"]
-        item = randint(0, 4)
-        return super_powers[item]
+        self.super_powers = ["X-Ray Vision", "Super Strength", "Bullet Proof", "Super Speed"]
+        self.item = randint(0, 3)
+        return self.super_powers[self.item]
 
     def use_power(self, name):
         for member_dict in self.members:
             if member_dict["name"] == name:
                 if member_dict["age"] > 18:
-                    print(f'{member_dict["name"]} has incredible_presentation().')
-                    member_dict["power"] = incredible_presentation()
+                    print(f'{member_dict["name"]} has {self.incredible_presentation()}.')
+                    member_dict["power"] = self.incredible_presentation()
                 else:
                     raise Exception("You have no power here!")
     

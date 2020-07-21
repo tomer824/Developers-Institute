@@ -56,3 +56,5 @@ class QuantumParticle():
     
     def spin(self):
         spins = random.choice([0.5, -0.5])
+    
+    
