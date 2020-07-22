@@ -46,64 +46,62 @@
 # 2.
 
 class BankAccount():
-    
+
 	def __init__(self, card_number, pin_number=12345):
 		self.balance = 0
 		self.card_number = card_number
 		self.pin_number = pin_number
 
-    def deposit(self, amount):
-        if amount >= 0:
-            self.balance += amount
-            return True
-        return False
-​
+	def deposit(self, amount):
+		if amount >= 0:
+			self.balance += amount
+			return True
+		return False
+
 	def withdraw(self, amount):
-		if amount <= self.balance and checkBills = True:
+		if amount <= self.balance and self.checkBills() == True:
 			self.balance -= amount
 			return amount
 		return False
-​
+
 	def check_info(self, card_number, pin_number):
 		if card_number == self.card_number and pin_number == self.pin_number:
 			return True
 		return False
-​
+
 	def depositBills(self):
 		ans = True
-        total = 0
-        while ans = True:
-            twenty = int(input("How many twenties would you like to deposit? ")) * 20
-            fifty = int(input("How many fifties would you like to deposit? ")) * 50
-            hundred = int(input("How many hundreds would you like to deposit? ")) * 100
-            total += sum(twenty, fifty, hundred)
-            again = ("Would you like to make another deposit? ")
-                if again = yes.lower():
-                    ans = True
-                else:
-                    ans = False
-        return total
-​
+		total = 0
+		while ans == True:
+			twenty = int(input("How many twenties would you like to deposit? ")) * 20
+			fifty = int(input("How many fifties would you like to deposit? ")) * 50
+			hundred = int(input("How many hundreds would you like to deposit? ")) * 100
+			total += sum(twenty, fifty, hundred)
+			again = input("Would you like to make another deposit? ")
+			if again == "yes".lower():
+				ans = True
+			else:
+				ans = False
+		return total
+
 	def checkBills(self, amount):
-		if amount % 20 == 0 or amount % 50 == 0 
-            return True
-        elif amount - 50 < 0 and amount - 50 % 20 = 0):
-            return true
-        return False
-​
-​​
+		if amount % 20 == 0 or amount % 50 == 0:
+			return True
+		elif amount - 50 < 0 and amount - 50 % 20 == 0:
+			return True
+		return False
+
+
 class Owner():
-​
+
 	def __init__(self, name):
 		self.name = name
 		print(f"{self.name} has been born")
-​
-​
+
 	def open_account(self, card_number, pin_number):
 		self.account = BankAccount(card_number, pin_number)
 		print("Your account is ready")
-​
-​
+
 	def deposit(self, amount):
 		if self.authenticate():
 			amount = self.depositBills()
@@ -113,8 +111,7 @@ class Owner():
 				print("Invalid Amount.")
 		else:
 			print("Your card has been eaten")
-​
-​
+
 	def withdraw(self, amount):
 		if self.authenticate():
 			if self.account.withdraw(amount):
@@ -123,8 +120,7 @@ class Owner():
 				print("Insufficient Balance")
 		else:
 			print("Your card has been eaten")
-​
-​
+
 	def authenticate(self):
 		for i in range(2):
 			card_number = input("Enter your card number: ")
@@ -136,5 +132,5 @@ class Owner():
 					print("Invalid authentication. Please try again")
 		return False
 
-tomer = Owner("Tomer", 100, 123456, 987654)
-tomer.check_owner_info(123456, 987654)
+tomer = Owner("Tomer")
+tomer.open_account(123, 789)

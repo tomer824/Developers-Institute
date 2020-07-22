@@ -112,46 +112,30 @@
 # Be able to compare to see if there are equal
 # Be able to put them in a list and sort them
 
-# import math
+import math
 
-# class Circle():
-#     def __init__(self, name, radius):
-#         self.name = name
-#         self.radius = radius
-#         self.area = math.pi * self.radius**2
+class Circle():
+    def __init__(self, name, radius):
+        self.name = name
+        self.radius = radius
+        self.area = math.pi * self.radius**2
 
-#     def __add__(self, other_circle):
-#         both_circles = self.area + other_circle.area
-#         return both_circles
+    def __add__(self, other_circle):
+        both_circles = self.area + other_circle.area
+        return both_circles
 
-#     def __gt__(self, other_circle):
-#         if self.area > other_circle.area:
-#             return True
-#         return False
-#     def __eq__(self, other_circle):
-#         if self.area == other_circle.area:
-#             return True
-#         return False
+    def __gt__(self, other_circle):
+        if self.area > other_circle.area:
+            return True
+        return False
+    def __eq__(self, other_circle):
+        if self.area == other_circle.area:
+            return True
+        return False
 
-# def sort(*circles):
-#     circle_list = []
-#     for circle in circles:
-#         circle_list.append(circle)
-#     circle_list.sort()
-#     return circle_list
-
-# 3.
-
-from random import randint  #import randint from random module
-
-def get_num():
-    number = randint(1,10)
-    return number
-    #selects a random number from 1-10
-
-def pwr(func):
-    number = func()
-    print(number, number*number)
-    # print number and number multiplied by itself
-
-pwr(get_num) #calls get_num function
+def sort(*circles):
+    circle_list = []
+    for circle in circles:
+        circle_list.append(circle)
+    circle_list.sort()
+    return circle_list
