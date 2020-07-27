@@ -1,0 +1,45 @@
+CREATE TABLE FirstTab (
+     id integer, 
+     name VARCHAR(10)
+)
+will create a new table called first tab with a column id which is an integer and a colum name which is 10 charachters long max
+
+INSERT INTO FirstTab VALUES
+(5,'Pawan'),
+(6,'Sharlee'),
+(7,'Krish'),
+(NULL,'Avtaar')
+
+will insert 5 to id and pawan into name, 6 into id and sharlee into name
+7 into id and krish into name, null into id and avtaar into name
+
+SELECT * FROM FirstTab
+will show everything from the table
+
+CREATE TABLE SecondTab (
+    id integer 
+)
+
+will create another table called second tab with column for id which is an integer
+
+INSERT INTO SecondTab VALUES
+(5),
+(NULL)
+
+will insert 5 and null into the id column of secondtab table
+
+SELECT * FROM SecondTab
+
+will show everything in the secondtab table
+
+Q1
+0
+
+Q2
+2
+
+Q3
+0
+
+Q4
+2

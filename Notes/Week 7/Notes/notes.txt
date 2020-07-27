@@ -1,0 +1,22 @@
+-- SELECT COUNT(number_oscars) FROM actors WHERE number_oscars > 3
+--SELECT first_name, last_name FROM actors ORDER BY age ASC LIMIT 1
+--SELECT first_name, last_name FROM actors WHERE (select min(age) FROM actors)=age
+
+-- SELECT COUNT(*) nb_actors, sum(number_oscars) sum_oscars, round(avg(number_oscars), 2) avg_oscars,
+-- max(number_oscars) max_oscars 
+-- FROM actors 
+-- WHERE number_oscars > 3
+
+-- how many first names for each last name
+-- SELECT last_name, COUNT(first_name) nb_first_names FROM ACTORS
+-- GROUP BY last_name
+
+-- create new table inside hollywood database
+CREATE TABLE movies(
+movie_id SERIAL,
+movie_title VARCHAR (50) NOT NULL,
+movie_story TEXT,
+actor_playing_id INTEGER,
+PRIMARY KEY (movie_id),
+FOREIGN KEY (actor_playing_id) REFERENCES actors (actor_id)
+);
