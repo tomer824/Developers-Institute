@@ -1,0 +1,71 @@
+1) create folder (polls_website)
+
+2) go into folder then - virtualenv (name of enviornment)
+
+3) source (name of enviornment)/Scripts/activate
+if successful the name of the enviornment should be written in parenthases 
+(name of enviornment) above / start of each line
+
+4) pip install django
+
+5) start django project - code is: django-admin startproject (create name of project)
+
+6) go into project folder
+
+7) python manage.py runserver
+
+8) python manage.py startapp (create name of app)
+
+9) go into project folder inside the app folder - go to settings.py
+
+10) go to installed apps and add the new app at the bottom of the list
+
+11) go to app folder and add a view in the views folder 
+add at the top - from django.http import HttpResponse
+add in the middle function: def (name of function)(Request)   - request must be in the parenthesis
+    return HttpResponse("what appears on the screen")
+
+12) in app folder create a folder urls.py
+
+13) inside the urls file
+ *from django.urls import path  #path function
+* from . import views  # . is shorthand for the current directory
+(2 imports! and url platter below)
+
+urlpatters = [
+    path('index', views.index, name = 'index')
+]
+
+*** review the above - index name not required, can name it anything 
+
+14) go to project folder urls file
+path('poll_app/', include('poll_app.urls'))
+
+*** review - enter name of the app
+
+at the top, after from django.urls import path: put ", include"
+
+17) create a templates folder inside the app folder
+
+16) in project settings folder - in templates by DIRs add: [os.path.join(BASE_DIR, 'templates')]
+
+17) in project views folder - def index(request):
+    return render(request, 'index.html')
+
+18) in project templates folder, create html file and enter the text - name html file
+same as the file name given in #17 above
+
+19)   context = {
+        'user' : user,
+        'subjects': subjects
+    }
+    return render(request, 'index.html', context)
+
+    ** in the views, you can add variables and other info and use the "context =" to define the variables
+    for the html page
+
+
+
+in the html page a variable / template tag is surrounded by % % - you can do a for loop or if statement
+in the html surrounded by % %
+

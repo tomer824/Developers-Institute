@@ -1,0 +1,1 @@
+{"1": {"name": "dog", "id": 1, "legs": 4, "weight": 100, "height": 3, "speed": 10, "family": 1}, "2": {"name": "lizard", "id": 2, "legs": 4, "weight": 0.5, "height": 0.5, "speed": 2, "family": 2}, "3": {"name": "tarantula", "id": 3, "legs": 8, "weight": 1, "height": 0.5, "speed": 2, "family": 4}}
