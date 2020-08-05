@@ -27,7 +27,11 @@ add in the middle function: def (name of function)(Request)   - request must be 
 
 12) in app folder create a folder urls.py
 
-13) inside the urls file
+13) inside project urls, add include at the top and then new line add new path 
+path('info/', include('info.urls'))
+info = name of new app 
+
+inside the app urls file (that i created)
  *from django.urls import path  #path function
 * from . import views  # . is shorthand for the current directory
 (2 imports! and url platter below)
@@ -37,6 +41,8 @@ urlpatters = [
 ]
 
 *** review the above - index name not required, can name it anything 
+
+13A) in app create 2 folders - templates and static
 
 14) go to project folder urls file
 path('poll_app/', include('poll_app.urls'))
@@ -69,3 +75,10 @@ same as the file name given in #17 above
 in the html page a variable / template tag is surrounded by % % - you can do a for loop or if statement
 in the html surrounded by % %
 
+
+
+
+----
+
+in views - at the top - import from models
+* from (app name).models import (name of models / classes created)

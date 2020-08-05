@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for animal in animals %}
+        <ul>
+            <li>Name: {{animal.name}}</li>
+            <li>Legs: {{animal.legs}} </li>
+            <li>Weight: {{animal.weight}}</li>
+            <li>Height: {{animal.height}}</li>
+            <li>Speed: {{animal.speed}}</li>
+        </ul>
+        <a href="{% url 'animal' animal.id %}">See this animal</a>
+
+{% endfor %}
+</body>
+</html>
