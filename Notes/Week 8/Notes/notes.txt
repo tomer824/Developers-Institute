@@ -12,6 +12,8 @@ if successful the name of the enviornment should be written in parenthases
 
 6) go into project folder
 
+(after connecting postgres database must install pyscopg2)
+
 7) python manage.py runserver
 
 8) python manage.py startapp (create name of app)
