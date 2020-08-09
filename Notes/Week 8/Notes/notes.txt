@@ -38,7 +38,7 @@ inside the app urls file (that i created)
 * from . import views  # . is shorthand for the current directory
 (2 imports! and url platter below)
 
-urlpatters = [
+urlpatterns = [
     path('index', views.index, name = 'index')
 ]
 
