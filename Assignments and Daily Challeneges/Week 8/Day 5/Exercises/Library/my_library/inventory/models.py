@@ -11,8 +11,7 @@ class Book(models.Model):
     year = models.DateField()
     author = models.ForeignKey(Author, on_delete = models.CASCADE)
 
-
 class Customer(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    checked_book = models.ManyToManyField(Book)
+    books = models.ManyToManyField(Book)

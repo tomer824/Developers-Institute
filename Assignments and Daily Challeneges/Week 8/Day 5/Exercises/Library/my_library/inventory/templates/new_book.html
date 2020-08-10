@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+
+ENTER NEW BOOK INFORMATION
+<form method="POST">
+    {% csrf_token %}
+    <label>Book Title</label>
+    <input type="text" name="title" placeholder="New Book Title"><br>
+    <label>Date of Publication</label>
+    <input type="text" name="year" placeholder="YYYY-MM-DD"><br>
+
+    Please select the author:
+    <select name="authors_dropdown">
+        {% for author in authors %}
+       <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
+     {% endfor %}
+     
+     </select><br>
+     <input type = 'submit'>
+
+</form>
+
+{% endblock %}
